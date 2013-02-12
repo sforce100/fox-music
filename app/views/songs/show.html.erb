@@ -1,0 +1,52 @@
+<%= javascript_include_tag 'jwplayer/jwplayer' %>
+<script>jwplayer.key="zVsIDD8D4gCoEsQWHo78A30MV1+XJn2hWSj7Ew=="</script>
+
+<div id='my-video'></div>
+<script type='text/javascript'>
+    jwplayer('my-video').setup({
+        file: 'Location of my video file',
+        width: '480',
+        height: '270'
+    });
+</script>
+
+<script type="text/javascript">
+jwplayer(options.id).setup({  
+      flashplayer: "/jwplayer/player.swf",  
+      autostart: autostart,  
+      file: url,  
+      stretching: 'fill',  
+      controlbar: 'bottom', 
+      width: width,  
+      height: height,  
+      events: {  
+            onPause: function(event) {  
+                    jwplayer().play();  
+            }  
+      } 
+</script>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Album:</b>
+  <%= @song.album %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @song.name %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%= @song.path %>
+</p>
+
+<p>
+  <b>Publish at:</b>
+  <%= @song.publish_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>

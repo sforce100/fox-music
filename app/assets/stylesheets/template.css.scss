@@ -1,0 +1,231 @@
+body {
+	background:image-url("bg.gif");
+}
+#logo-banner {
+	background:image-url("head_bg.jpg");
+	height: 83px;
+	width: 100%;
+}
+#logo-aear {
+	width: 948px;
+}
+#logo-aear img {
+	margin-top: 10px;
+	float: left;
+	margin-right: 12px;
+}
+#logo-flower {
+	background:image-url("head_icon.png");
+	height: 42px;
+	width: 70px;
+	margin-top: 41px;
+}
+#nav-banner {
+	background:image-url("nav_bg.gif");
+	height: 40px;
+	width: 100%;
+	overflow: hidden;
+}
+#nav-head {
+	width: 962px;
+	margin-top: 12px;
+}
+#nav-head ul, #nav-head li {
+	float: left;
+}
+#footer{
+	width: 100%;
+	min-width: 1024px;
+	text-align: center;
+	height: 80px;
+	overflow: hidden;
+}
+#footer div{
+	border-top: solid 1px #ccc;
+	margin: 25px 0;
+	padding: 8px 0;
+}
+.first-nav {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	margin-right: 16px;
+	cursor: pointer;
+}
+.next-nav {
+	color: #666;
+	margin-right: 16px;
+	cursor: pointer;
+	padding-top: 2px;
+}
+.long-nav {
+	color: #d5d5d5;
+	font-size: 15px;
+	margin-right: 16px;
+	_margin-right: 10px; /*IE6*/
+}
+.font12
+{
+	font-size:12px;
+}
+.font14
+{
+	font-size:14px;
+}
+.font16
+{
+	font-size:16px;
+}
+.font18
+{
+	font-size:18px;
+}
+.font24
+{
+	font-size:24px;
+	font-family:Tahoma;
+}
+.font28
+{
+	font-size:28px;
+	font-family:Tahoma;
+}
+.fontTahoma
+{
+	font-family:Tahoma;
+}
+.fontYaHei
+{
+	font-family:微软雅黑;
+}
+.fontSong{
+	font-family:宋体;
+}
+.fontN{
+	font-weight: normal;
+}
+.fontB
+{
+	font-weight:bold;
+}
+.textHeight12{
+	line-height: 150%;
+}
+.textHeight14{
+	line-height: 150%;
+}
+.orange {
+	color: #ff6a11;
+}
+.green
+{
+	color:#009900;
+}
+.white
+{
+	color:#fff;
+}
+.gray333
+{
+	color:#333;
+}
+.gray666 {
+	color: #666;
+}
+.gray999
+{
+	color:#999;
+}
+.lightBlue
+{
+	color: #4BA9E0;
+}
+.group-button
+{
+	display:block;
+}
+.group-button:hover
+{
+	text-decoration:none;
+	cursor:pointer;
+}
+.group-button-item
+{
+	float: left;
+	display: block;
+}
+.over-hidden
+{
+	overflow:hidden;
+}
+.none
+{
+	display:none;
+}
+.icon{
+	float: left;
+}
+.flow-center {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+.flow-center-item {
+	position: relative;
+	right: 50%;
+	float: left;
+}
+/* BjStandard */
+.product-label {
+	font-family: "宋体";
+	font-weight: normal;
+	font-size: 12px;
+	background-color: #009900;
+	color: #fff;
+	border-radius: 3px;
+	position: relative;
+	z-index: 1;
+	behavior: url("assets/pie.htc");
+}
+
+.agent-card {
+	background:image-url("product/idcard.png");
+	width: 245px;
+	height: 91px;
+	z-index: 1;
+	background-color: #fff;
+}
+.agent-card-img {
+	width: 50px;
+	height: 58px;
+	margin: 15px 0 0 15px;
+}
+.agent-card-infor {
+	margin: 24px 0 0 20px;
+}
+.agent-card-conanct {
+	margin: 10px 0 0 20px;
+	width: 140px;
+}
+.agent-card-conanct img {
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-bottom: 3px;
+}
+.agent-card-button{
+	width: 64px;
+	height: 24px;
+	line-height: 24px;
+	color: #666;
+	background-color: #f3f3f3;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	cursor: pointer;
+	behavior: url("assets/pie.htc");
+}
+.agent-card-button:hover{
+	text-decoration: none;
+	background-color: #e5e5e5;
+}

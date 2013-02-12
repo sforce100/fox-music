@@ -1,0 +1,24 @@
+<%= simple_form_for [:admin, @admin_video], :html => { :multipart => true } do |f| %>
+  <% if @admin_video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_video.errors.count, "error") %> prohibited this admin_video from being saved:</h2>
+
+      <ul>
+      <% @admin_video.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="">
+    <%= f.file_field :photo %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

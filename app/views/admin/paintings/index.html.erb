@@ -1,0 +1,21 @@
+<h1>Listing admin_paintings</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_paintings.each do |admin_painting| %>
+  <tr>
+    <td><%= link_to 'Show', admin_painting_path(admin_painting) %></td>
+    <td><%= link_to 'Edit', edit_admin_painting_path(admin_painting) %></td>
+    <td><%= link_to 'Destroy', admin_painting_path(admin_painting), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Painting', new_admin_painting_path %>

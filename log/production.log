@@ -1,0 +1,1660 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/songs" for 127.0.0.1 at 2013-01-26 21:30:28 +0800
+Processing by Admin::SongsController#index as HTML
+Completed 500 Internal Server Error in 169ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'fox_music_production.admins' doesn't exist: SHOW FULL FIELDS FROM `admins`):
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `block in execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:211:in `execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:259:in `execute_and_free'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:426:in `columns'
+  activerecord (3.2.8) lib/active_record/connection_adapters/schema_cache.rb:12:in `block in initialize'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `yield'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `default'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `columns'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:237:in `columns_hash'
+  activerecord (3.2.8) lib/active_record/locking/optimistic.rb:129:in `locking_enabled?'
+  activerecord (3.2.8) lib/active_record/relation.rb:170:in `exec_queries'
+  activerecord (3.2.8) lib/active_record/relation.rb:160:in `block in to_a'
+  activerecord (3.2.8) lib/active_record/explain.rb:40:in `logging_query_plan'
+  activerecord (3.2.8) lib/active_record/relation.rb:159:in `to_a'
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:378:in `find_first'
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:122:in `first'
+  orm_adapter (0.4.0) lib/orm_adapter/adapters/active_record.rb:17:in `get'
+  devise (2.1.2) lib/devise/models/authenticatable.rb:183:in `serialize_from_session'
+  devise (2.1.2) lib/devise/rails/warden_compat.rb:29:in `deserialize'
+  warden (1.2.1) lib/warden/session_serializer.rb:35:in `fetch'
+  warden (1.2.1) lib/warden/proxy.rb:212:in `user'
+  warden (1.2.1) lib/warden/proxy.rb:318:in `_perform_authentication'
+  warden (1.2.1) lib/warden/proxy.rb:127:in `authenticate!'
+  devise (2.1.2) lib/devise/controllers/helpers.rb:48:in `authenticate_admin!'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:418:in `_run__3442317693216417755__process_action__2784902551497930936__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  sass (3.2.5) lib/sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__3013357281098110319__call__715848150285467532__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-01-26 21:30:54 +0800
+Processing by Admin::AdminController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'fox_music_production.admins' doesn't exist: SHOW FULL FIELDS FROM `admins`):
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `query'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `block in execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:280:in `block in log'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_adapter.rb:275:in `log'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:245:in `execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:211:in `execute'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:259:in `execute_and_free'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:426:in `columns'
+  activerecord (3.2.8) lib/active_record/connection_adapters/schema_cache.rb:12:in `block in initialize'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `yield'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `default'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:228:in `columns'
+  activerecord (3.2.8) lib/active_record/model_schema.rb:237:in `columns_hash'
+  activerecord (3.2.8) lib/active_record/locking/optimistic.rb:129:in `locking_enabled?'
+  activerecord (3.2.8) lib/active_record/relation.rb:170:in `exec_queries'
+  activerecord (3.2.8) lib/active_record/relation.rb:160:in `block in to_a'
+  activerecord (3.2.8) lib/active_record/explain.rb:40:in `logging_query_plan'
+  activerecord (3.2.8) lib/active_record/relation.rb:159:in `to_a'
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:378:in `find_first'
+  activerecord (3.2.8) lib/active_record/relation/finder_methods.rb:122:in `first'
+  orm_adapter (0.4.0) lib/orm_adapter/adapters/active_record.rb:17:in `get'
+  devise (2.1.2) lib/devise/models/authenticatable.rb:183:in `serialize_from_session'
+  devise (2.1.2) lib/devise/rails/warden_compat.rb:29:in `deserialize'
+  warden (1.2.1) lib/warden/session_serializer.rb:35:in `fetch'
+  warden (1.2.1) lib/warden/proxy.rb:212:in `user'
+  warden (1.2.1) lib/warden/proxy.rb:318:in `_perform_authentication'
+  warden (1.2.1) lib/warden/proxy.rb:127:in `authenticate!'
+  devise (2.1.2) lib/devise/controllers/helpers.rb:48:in `authenticate_admin!'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:418:in `_run__554078100004280014__process_action__2784902551497930936__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  sass (3.2.5) lib/sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__3013357281098110319__call__715848150285467532__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 21:30:57 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4: 	<title>FoxMusic</title>
+    5: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+    6: 	<%= javascript_include_tag "application" %>
+    7: 	<%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3570330987002263705_30033220'
+
+
+Connecting to database specified by database.yml
+Migrating to CreateSongs (20130107150103)
+Migrating to DeviseCreateAdmins (20130113120306)
+Migrating to CreatePaintings (20130113140834)
+Migrating to AddImageToPaintings (20130113141155)
+Migrating to AddColToPaintings (20130113144302)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 21:37:59 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 83ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4: 	<title>FoxMusic</title>
+    5: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+    6: 	<%= javascript_include_tag "application" %>
+    7: 	<%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1735863898022381544_28235600'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 21:38:01 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4: 	<title>FoxMusic</title>
+    5: 	<%= stylesheet_link_tag    "application", :media => "all" %>
+    6: 	<%= javascript_include_tag "application" %>
+    7: 	<%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1735863898022381544_28235600'
+
+
+Connecting to database specified by database.yml
+Compiled jquery.js  (5ms)  (pid 4628)
+Compiled jquery_ujs.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/carousel.js  (52ms)  (pid 4628)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap.js  (200ms)  (pid 4628)
+Compiled jwplayer/jwplayer.html5.js  (5ms)  (pid 4628)
+Compiled jwplayer/jwplayer.js  (1ms)  (pid 4628)
+Compiled songs.js  (245ms)  (pid 4628)
+Compiled application.js  (671ms)  (pid 4628)
+Compiled template.css  (220ms)  (pid 4628)
+Compiled twitter/bootstrap.css  (3769ms)  (pid 4628)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/index.css  (18ms)  (pid 4628)
+Compiled admin/new.css  (23ms)  (pid 4628)
+Compiled admin.css  (4173ms)  (pid 4628)
+Compiled bootstrap.min.css  (5185ms)  (pid 4628)
+Compiled scaffolds.css  (27ms)  (pid 4628)
+Compiled songs.css  (2ms)  (pid 4628)
+Compiled application.css  (9423ms)  (pid 4628)
+Connecting to database specified by database.yml
+Compiled jquery.js  (57ms)  (pid 4628)
+Compiled jquery_ujs.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 4628)
+Compiled twitter/bootstrap.js  (194ms)  (pid 4628)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 4628)
+Compiled jwplayer/jwplayer.js  (0ms)  (pid 4628)
+Compiled songs.js  (83ms)  (pid 4628)
+Compiled application.js  (455ms)  (pid 4628)
+Compiled template.css  (106ms)  (pid 4628)
+Compiled twitter/bootstrap.css  (3526ms)  (pid 4628)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 4628)
+Compiled bootstrap-wysihtml5/index.css  (18ms)  (pid 4628)
+Compiled admin/new.css  (22ms)  (pid 4628)
+Compiled admin.css  (3817ms)  (pid 4628)
+Compiled bootstrap.min.css  (5251ms)  (pid 4628)
+Compiled scaffolds.css  (27ms)  (pid 4628)
+Compiled songs.css  (2ms)  (pid 4628)
+Compiled application.css  (9133ms)  (pid 4628)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 21:42:59 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/shared/_head.html.erb (1.4ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-bbdb066b8bb7917fa9586b932e84c0f0.css" for 127.0.0.1 at 2013-01-26 21:42:59 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-bbdb066b8bb7917fa9586b932e84c0f0.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/application-6a63d297e15a18af35196f151afcc29d.js" for 127.0.0.1 at 2013-01-26 21:42:59 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-6a63d297e15a18af35196f151afcc29d.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/logo-5738bce931d640d527a9c40fd21c2c14.png" for 127.0.0.1 at 2013-01-26 21:42:59 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo-5738bce931d640d527a9c40fd21c2c14.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/beijing-21419e4a2b1b6be100a2b7dc21d75100.png" for 127.0.0.1 at 2013-01-26 21:42:59 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/beijing-21419e4a2b1b6be100a2b7dc21d75100.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-01-26 21:47:47 +0800
+Processing by Admin::AdminController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 21:47:47 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (505.7ms)
+Completed 500 Internal Server Error in 719ms
+
+ActionView::Template::Error (admin.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    5:   <%= stylesheet_link_tag "admin" %>
+    6:   <%= yield :head %>
+    7:   <%= csrf_meta_tags %>
+    8:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  app/views/layouts/admin.html.erb:5:in `_app_views_layouts_admin_html_erb__3002045677663807687_28331580'
+
+
+Connecting to database specified by database.yml
+Compiled jquery.js  (5ms)  (pid 5167)
+Compiled jquery_ujs.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap.js  (201ms)  (pid 5167)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 5167)
+Compiled jwplayer/jwplayer.js  (0ms)  (pid 5167)
+Compiled songs.js  (83ms)  (pid 5167)
+Compiled application.js  (462ms)  (pid 5167)
+Compiled template.css  (202ms)  (pid 5167)
+Compiled twitter/bootstrap.css  (3587ms)  (pid 5167)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/index.css  (17ms)  (pid 5167)
+Compiled admin/new.css  (22ms)  (pid 5167)
+Compiled admin.css  (3882ms)  (pid 5167)
+Compiled bootstrap.min.css  (5183ms)  (pid 5167)
+Compiled scaffolds.css  (27ms)  (pid 5167)
+Compiled songs.css  (2ms)  (pid 5167)
+Compiled application.css  (5239ms)  (pid 5167)
+Compiled bootstrap-datepicker/core.js  (3ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (2ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/index.js  (580ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/core.js  (98ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (7ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/index.js  (21ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (1ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (1ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (1ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (1ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/index.js  (184ms)  (pid 5167)
+Compiled jquery-ui.js  (38ms)  (pid 5167)
+Compiled jquery-ui.min.js  (13ms)  (pid 5167)
+Compiled jquery.min.js  (1ms)  (pid 5167)
+Compiled twitter/bootstrap-responsive.css  (652ms)  (pid 5167)
+Compiled coffee-script.js  (7ms)  (pid 5167)
+Connecting to database specified by database.yml
+Compiled jquery.js  (59ms)  (pid 5167)
+Compiled jquery_ujs.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5167)
+Compiled twitter/bootstrap.js  (202ms)  (pid 5167)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 5167)
+Compiled jwplayer/jwplayer.js  (1ms)  (pid 5167)
+Compiled songs.js  (84ms)  (pid 5167)
+Compiled application.js  (465ms)  (pid 5167)
+Compiled template.css  (163ms)  (pid 5167)
+Compiled twitter/bootstrap.css  (3555ms)  (pid 5167)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/index.css  (69ms)  (pid 5167)
+Compiled admin/new.css  (23ms)  (pid 5167)
+Compiled admin.css  (3953ms)  (pid 5167)
+Compiled bootstrap.min.css  (5292ms)  (pid 5167)
+Compiled scaffolds.css  (27ms)  (pid 5167)
+Compiled songs.css  (2ms)  (pid 5167)
+Compiled application.css  (5350ms)  (pid 5167)
+Compiled bootstrap-datepicker/core.js  (1ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 5167)
+Compiled bootstrap-datepicker/index.js  (426ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/core.js  (26ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (7ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/index.js  (19ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (1ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 5167)
+Compiled bootstrap-wysihtml5/locales/index.js  (58ms)  (pid 5167)
+Compiled jquery-ui.js  (21ms)  (pid 5167)
+Compiled jquery-ui.min.js  (12ms)  (pid 5167)
+Compiled jquery.min.js  (1ms)  (pid 5167)
+Compiled twitter/bootstrap-responsive.css  (619ms)  (pid 5167)
+Compiled coffee-script.js  (3ms)  (pid 5167)
+Connecting to database specified by database.yml
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 22:35:23 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (538.7ms)
+  Rendered layouts/admin/_head.html.erb (3.3ms)
+Completed 500 Internal Server Error in 807ms
+
+ActionView::Template::Error (admin/llll.png isn't precompiled):
+    1: <div class=" well well-small">
+    2:   <div class="container-fluid">
+    3:     <a class="" href="<%= admin_root_path %>" ><%= image_tag "admin/llll.png" %></a>
+    4:     <div class="pull-right">
+    5:       <% if current_admin %>
+    6:         <b class="text-error"><%= current_admin.email %></b>
+  app/views/layouts/admin/_head.html.erb:3:in `_app_views_layouts_admin__head_html_erb__2174259854701310115_30782760'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb__685173778218860081_30318180'
+
+
+
+
+Started GET "/assets/logo-5738bce931d640d527a9c40fd21c2c14.png" for 127.0.0.1 at 2013-01-26 22:35:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo-5738bce931d640d527a9c40fd21c2c14.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/beijing-21419e4a2b1b6be100a2b7dc21d75100.png" for 127.0.0.1 at 2013-01-26 22:35:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/beijing-21419e4a2b1b6be100a2b7dc21d75100.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 22:35:57 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/shared/_head.html.erb (1.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-01-26 22:36:02 +0800
+Processing by Admin::AdminController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 22:36:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (11.5ms)
+  Rendered layouts/admin/_head.html.erb (1.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (admin/llll.png isn't precompiled):
+    1: <div class=" well well-small">
+    2:   <div class="container-fluid">
+    3:     <a class="" href="<%= admin_root_path %>" ><%= image_tag "admin/llll.png" %></a>
+    4:     <div class="pull-right">
+    5:       <% if current_admin %>
+    6:         <b class="text-error"><%= current_admin.email %></b>
+  app/views/layouts/admin/_head.html.erb:3:in `_app_views_layouts_admin__head_html_erb__2174259854701310115_30782760'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb__685173778218860081_30318180'
+
+
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 22:39:22 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (14.9ms)
+  Rendered layouts/admin/_head.html.erb (1.5ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (admin/llll.png isn't precompiled):
+    1: <div class=" well well-small">
+    2:   <div class="container-fluid">
+    3:     <a class="" href="<%= admin_root_path %>" >fox-music manager</a>
+    4:     <div class="pull-right">
+    5:       <% if current_admin %>
+    6:         <b class="text-error"><%= current_admin.email %></b>
+  app/views/layouts/admin/_head.html.erb:3:in `_app_views_layouts_admin__head_html_erb__2174259854701310115_30782760'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb__685173778218860081_30318180'
+
+
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 22:39:35 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (10.2ms)
+  Rendered layouts/admin/_head.html.erb (1.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (admin/llll.png isn't precompiled):
+    1: <div class=" well well-small">
+    2:   <div class="container-fluid">
+    3:     <a class="" href="<%= admin_root_path %>" >fox-music manager</a>
+    4:     <div class="pull-right">
+    5:       <% if current_admin %>
+    6:         <b class="text-error"><%= current_admin.email %></b>
+  app/views/layouts/admin/_head.html.erb:3:in `_app_views_layouts_admin__head_html_erb__2174259854701310115_30782760'
+  app/views/layouts/admin.html.erb:11:in `_app_views_layouts_admin_html_erb__685173778218860081_30318180'
+
+
+Connecting to database specified by database.yml
+Compiled jquery.js  (60ms)  (pid 5865)
+Compiled jquery_ujs.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/affix.js  (1ms)  (pid 5865)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap.js  (209ms)  (pid 5865)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 5865)
+Compiled jwplayer/jwplayer.js  (0ms)  (pid 5865)
+Compiled songs.js  (86ms)  (pid 5865)
+Compiled application.js  (483ms)  (pid 5865)
+Compiled template.css  (207ms)  (pid 5865)
+Compiled twitter/bootstrap.css  (3648ms)  (pid 5865)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/index.css  (111ms)  (pid 5865)
+Compiled admin/new.css  (26ms)  (pid 5865)
+Compiled admin.css  (4048ms)  (pid 5865)
+Compiled bootstrap.min.css  (5332ms)  (pid 5865)
+Compiled scaffolds.css  (27ms)  (pid 5865)
+Compiled songs.css  (2ms)  (pid 5865)
+Compiled application.css  (5389ms)  (pid 5865)
+Compiled bootstrap-datepicker/core.js  (1ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/index.js  (439ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/core.js  (24ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (7ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/index.js  (90ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/index.js  (57ms)  (pid 5865)
+Compiled jquery-ui.js  (21ms)  (pid 5865)
+Compiled jquery-ui.min.js  (12ms)  (pid 5865)
+Compiled jquery.min.js  (1ms)  (pid 5865)
+Compiled twitter/bootstrap-responsive.css  (586ms)  (pid 5865)
+Compiled coffee-script.js  (3ms)  (pid 5865)
+Connecting to database specified by database.yml
+Compiled jquery.js  (58ms)  (pid 5865)
+Compiled jquery_ujs.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 5865)
+Compiled twitter/bootstrap.js  (196ms)  (pid 5865)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 5865)
+Compiled jwplayer/jwplayer.js  (1ms)  (pid 5865)
+Compiled songs.js  (84ms)  (pid 5865)
+Compiled application.js  (457ms)  (pid 5865)
+Compiled template.css  (159ms)  (pid 5865)
+Compiled twitter/bootstrap.css  (3442ms)  (pid 5865)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/index.css  (59ms)  (pid 5865)
+Compiled admin/new.css  (22ms)  (pid 5865)
+Compiled admin.css  (3827ms)  (pid 5865)
+Compiled bootstrap.min.css  (5460ms)  (pid 5865)
+Compiled scaffolds.css  (27ms)  (pid 5865)
+Compiled songs.css  (2ms)  (pid 5865)
+Compiled application.css  (5518ms)  (pid 5865)
+Compiled bootstrap-datepicker/core.js  (1ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 5865)
+Compiled bootstrap-datepicker/index.js  (417ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/core.js  (23ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (74ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/index.js  (86ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 5865)
+Compiled bootstrap-wysihtml5/locales/index.js  (123ms)  (pid 5865)
+Compiled jquery-ui.js  (86ms)  (pid 5865)
+Compiled jquery-ui.min.js  (11ms)  (pid 5865)
+Compiled jquery.min.js  (1ms)  (pid 5865)
+Compiled twitter/bootstrap-responsive.css  (565ms)  (pid 5865)
+Compiled coffee-script.js  (3ms)  (pid 5865)
+Connecting to database specified by database.yml
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 22:50:13 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (485.5ms)
+  Rendered layouts/admin/_head.html.erb (2.2ms)
+Completed 500 Internal Server Error in 771ms
+
+ActionView::Template::Error (admin.js isn't precompiled):
+    23:     </div>
+    24:   </div>
+    25: </div>
+    26:   <%= javascript_include_tag "admin" %>
+    27: </body>
+    28: </html>
+  app/views/layouts/admin.html.erb:26:in `_app_views_layouts_admin_html_erb___3368133836213022038_35717260'
+
+
+Connecting to database specified by database.yml
+Compiled jquery.js  (5ms)  (pid 6052)
+Compiled jquery_ujs.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 6052)
+Compiled twitter/bootstrap.js  (204ms)  (pid 6052)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 6052)
+Compiled jwplayer/jwplayer.js  (54ms)  (pid 6052)
+Compiled songs.js  (84ms)  (pid 6052)
+Compiled application.js  (466ms)  (pid 6052)
+Compiled template.css  (212ms)  (pid 6052)
+Compiled twitter/bootstrap.css  (3656ms)  (pid 6052)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 6052)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 6052)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 6052)
+Compiled bootstrap-wysihtml5/index.css  (18ms)  (pid 6052)
+Compiled admin/new.css  (23ms)  (pid 6052)
+Compiled admin.css  (3963ms)  (pid 6052)
+Compiled bootstrap.min.css  (5316ms)  (pid 6052)
+Compiled scaffolds.css  (27ms)  (pid 6052)
+Compiled songs.css  (2ms)  (pid 6052)
+Compiled application.css  (5374ms)  (pid 6052)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Compiled jquery.js  (56ms)  (pid 6107)
+Compiled jquery_ujs.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 6107)
+Compiled twitter/bootstrap.js  (203ms)  (pid 6107)
+Connecting to database specified by database.yml
+Compiled jquery.js  (4ms)  (pid 6194)
+Compiled jquery_ujs.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap.js  (202ms)  (pid 6194)
+Compiled admin.js  (296ms)  (pid 6194)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 6194)
+Compiled jwplayer/jwplayer.js  (0ms)  (pid 6194)
+Compiled songs.js  (121ms)  (pid 6194)
+Compiled application.js  (159ms)  (pid 6194)
+Compiled template.css  (206ms)  (pid 6194)
+Compiled twitter/bootstrap.css  (3606ms)  (pid 6194)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/index.css  (114ms)  (pid 6194)
+Compiled admin/new.css  (22ms)  (pid 6194)
+Compiled admin.css  (4004ms)  (pid 6194)
+Compiled bootstrap.min.css  (5513ms)  (pid 6194)
+Compiled scaffolds.css  (28ms)  (pid 6194)
+Compiled songs.css  (2ms)  (pid 6194)
+Compiled application.css  (5573ms)  (pid 6194)
+Compiled bootstrap-datepicker/core.js  (1ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/index.js  (432ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/core.js  (24ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (6ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/index.js  (90ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/index.js  (131ms)  (pid 6194)
+Compiled jquery-ui.js  (92ms)  (pid 6194)
+Compiled jquery-ui.min.js  (10ms)  (pid 6194)
+Compiled jquery.min.js  (1ms)  (pid 6194)
+Compiled twitter/bootstrap-responsive.css  (574ms)  (pid 6194)
+Compiled coffee-script.js  (3ms)  (pid 6194)
+Connecting to database specified by database.yml
+Compiled jquery.js  (5ms)  (pid 6194)
+Compiled jquery_ujs.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/alert.js  (1ms)  (pid 6194)
+Compiled twitter/bootstrap/affix.js  (1ms)  (pid 6194)
+Compiled twitter/bootstrap/typeahead.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 6194)
+Compiled twitter/bootstrap.js  (210ms)  (pid 6194)
+Compiled admin.js  (312ms)  (pid 6194)
+Compiled jwplayer/jwplayer.html5.js  (2ms)  (pid 6194)
+Compiled jwplayer/jwplayer.js  (1ms)  (pid 6194)
+Compiled songs.js  (75ms)  (pid 6194)
+Compiled application.js  (167ms)  (pid 6194)
+Compiled template.css  (109ms)  (pid 6194)
+Compiled twitter/bootstrap.css  (3667ms)  (pid 6194)
+Compiled bootstrap-datepicker.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/core.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/wysiwyg-color.css  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/index.css  (17ms)  (pid 6194)
+Compiled admin/new.css  (22ms)  (pid 6194)
+Compiled admin.css  (3869ms)  (pid 6194)
+Compiled bootstrap.min.css  (5396ms)  (pid 6194)
+Compiled scaffolds.css  (28ms)  (pid 6194)
+Compiled songs.css  (2ms)  (pid 6194)
+Compiled application.css  (5544ms)  (pid 6194)
+Compiled bootstrap-datepicker/core.js  (1ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.bg.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.br.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ca.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.cs.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.da.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.de.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.el.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.es.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fi.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.fr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.he.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.hr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.id.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.is.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.it.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ja.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.kr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lt.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.lv.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ms.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nb.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.nl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.pt.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ro.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.rs.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.ru.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sk.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sl.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sv.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.sw.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.th.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.tr.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.uk.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.js  (0ms)  (pid 6194)
+Compiled bootstrap-datepicker/index.js  (411ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/core.js  (24ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/wysihtml5.js  (82ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/index.js  (93ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ca-CT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/de-DE.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/el-GR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/es-AR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/es-ES.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/fr-FR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/fr-NL.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/it-IT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ja-JP.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/lt-LT.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/mo-MD.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/pt-BR.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/ru-RU.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/sv-SE.js  (0ms)  (pid 6194)
+Compiled bootstrap-wysihtml5/locales/index.js  (59ms)  (pid 6194)
+Compiled jquery-ui.js  (22ms)  (pid 6194)
+Compiled jquery-ui.min.js  (73ms)  (pid 6194)
+Compiled jquery.min.js  (1ms)  (pid 6194)
+Compiled twitter/bootstrap-responsive.css  (570ms)  (pid 6194)
+Compiled coffee-script.js  (3ms)  (pid 6194)
+Connecting to database specified by database.yml
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 23:01:09 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (494.4ms)
+  Rendered layouts/admin/_head.html.erb (2.2ms)
+Completed 200 OK in 772ms (Views: 581.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css" for 127.0.0.1 at 2013-01-26 23:01:10 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js" for 127.0.0.1 at 2013-01-26 23:01:10 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2013-01-26 23:01:24 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nqdokjTr40jBk3dwz728oLR1fI4BuDVvXlPqbWksLk=", "admin"=>{"email"=>"master@xiangrikui.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 116ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nqdokjTr40jBk3dwz728oLR1fI4BuDVvXlPqbWksLk=", "admin"=>{"email"=>"master@xiangrikui.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (11.7ms)
+  Rendered layouts/admin/_head.html.erb (0.5ms)
+Completed 200 OK in 553ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css" for 127.0.0.1 at 2013-01-26 23:01:25 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js" for 127.0.0.1 at 2013-01-26 23:01:25 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2013-01-26 23:01:31 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nqdokjTr40jBk3dwz728oLR1fI4BuDVvXlPqbWksLk=", "admin"=>{"email"=>"master@xiangrikui.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nqdokjTr40jBk3dwz728oLR1fI4BuDVvXlPqbWksLk=", "admin"=>{"email"=>"master@xiangrikui.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (10.8ms)
+  Rendered layouts/admin/_head.html.erb (0.4ms)
+Completed 200 OK in 548ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css" for 127.0.0.1 at 2013-01-26 23:01:32 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js" for 127.0.0.1 at 2013-01-26 23:01:32 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Migrating to CreateSongs (20130107150103)
+Migrating to DeviseCreateAdmins (20130113120306)
+Migrating to CreatePaintings (20130113140834)
+Migrating to AddImageToPaintings (20130113141155)
+Migrating to AddColToPaintings (20130113144302)
+Connecting to database specified by database.yml
+Migrating to CreateSongs (20130107150103)
+Migrating to DeviseCreateAdmins (20130113120306)
+Migrating to CreatePaintings (20130113140834)
+Migrating to AddImageToPaintings (20130113141155)
+Migrating to AddColToPaintings (20130113144302)
+Connecting to database specified by database.yml
+Migrating to CreateSongs (20130107150103)
+Migrating to DeviseCreateAdmins (20130113120306)
+Migrating to CreatePaintings (20130113140834)
+Migrating to AddImageToPaintings (20130113141155)
+Migrating to AddColToPaintings (20130113144302)
+Migrating to CreateVideos (20130115154054)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2013-01-26 23:10:18 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin (727.8ms)
+  Rendered layouts/admin/_head.html.erb (2.8ms)
+Completed 200 OK in 1089ms (Views: 828.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css" for 127.0.0.1 at 2013-01-26 23:10:19 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js" for 127.0.0.1 at 2013-01-26 23:10:19 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2013-01-26 23:10:25 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nqdokjTr40jBk3dwz728oLR1fI4BuDVvXlPqbWksLk=", "admin"=>{"email"=>"master@xiangrikui.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 1138ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-01-26 23:10:26 +0800
+Processing by Admin::AdminController#index as HTML
+  Rendered admin/admin/index.html.erb within layouts/admin (0.7ms)
+  Rendered layouts/admin/_head.html.erb (1.7ms)
+  Rendered layouts/admin/_navigation.html.erb (3.4ms)
+Completed 200 OK in 26ms (Views: 15.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css" for 127.0.0.1 at 2013-01-26 23:10:26 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-8248fc684e1f0d218ef4ebbbe1b64bb5.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js" for 127.0.0.1 at 2013-01-26 23:10:26 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/admin-613625c2d18aeb7d8f96ee2a1f8be9ff.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/hzh/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+

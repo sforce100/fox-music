@@ -1,0 +1,29 @@
+<h1>Listing admin_songs</h1>
+
+<table>
+  <tr>
+    <th>Album</th>
+    <th>Name</th>
+    <th>Path</th>
+    <th>Publish at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_songs.each do |admin_song| %>
+  <tr>
+    <td><%= admin_song.album %></td>
+    <td><%= admin_song.name %></td>
+    <td><%= admin_song.path %></td>
+    <td><%= admin_song.publish_at %></td>
+    <td><%= link_to 'Show', admin_song %></td>
+    <td><%= link_to 'Edit', edit_admin_song_path(admin_song) %></td>
+    <td><%= link_to 'Destroy', admin_song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Song', new_admin_song_path %>
